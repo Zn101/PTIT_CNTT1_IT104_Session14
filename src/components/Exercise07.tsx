@@ -147,8 +147,18 @@ export default function Exercise07() {
           >
             Dang ky
           </button>
+          {message && (
+            <p
+              style={{
+                marginTop: "15px",
+                textAlign: "center",
+                color: message.includes("thành công") ? "green" : "red"
+              }}
+            >
+              {message}
         </div>
       </form>
     </div>
   );
 }
+
