@@ -25,7 +25,7 @@ export default function Exercise07() {
     event.preventDefault();
 
     if (!form.name.trim() || !form.email.trim() || !form.password.trim()) {
-      setMessage("Name and email should not be empty");
+      setMessage("Name, Email and Password should not be empty");
       return;
     }
 
@@ -51,7 +51,6 @@ export default function Exercise07() {
 
     setMessage("Done");
 
-    // Focus back to name
     if (nameInputRef.current) {
       nameInputRef.current.focus();
     }
@@ -147,18 +146,20 @@ export default function Exercise07() {
           >
             Dang ky
           </button>
+
           {message && (
             <p
               style={{
                 marginTop: "15px",
                 textAlign: "center",
-                color: message.includes("thành công") ? "green" : "red"
+                color: message.includes("Done") ? "green" : "red"
               }}
             >
               {message}
+            </p>
+          )}
         </div>
       </form>
     </div>
   );
 }
-
