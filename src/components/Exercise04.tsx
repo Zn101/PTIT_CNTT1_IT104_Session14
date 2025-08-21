@@ -31,7 +31,7 @@ export default class Exercise04 extends Component<object, userName>{
         console.log("Component da mount xong")
     }
     shouldComponentUpdate(nextProps: object, nextState: Readonly<userName>): boolean {
-        return false;
+        return nextState.isBold !== this.state.isBold;
     }
     componentDidUpdate(prevProps: object, prevState: Readonly<userName>, snapshot?: any): void {
         if (prevState.name !== this.state.name) {
@@ -39,3 +39,4 @@ export default class Exercise04 extends Component<object, userName>{
         }
     }
 }
+
